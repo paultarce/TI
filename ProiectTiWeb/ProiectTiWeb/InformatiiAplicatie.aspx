@@ -6,8 +6,17 @@
     </asp:Panel>
      <p>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                Pentru adăugarea unuia sau mai multor angajati, se va naviga către meniul &nbsp; INTRODUCERE DATE, apoi se va selecta Adaugare Angajati. În fereastra de adaugare angajati, se vor putea adăuga unul sau mai mulți anjagati
-Pentru modificarea datelor angajatilor sau stergerea unuia sau mai multor angajati din baza de date se va proceda la fel ca pasul precent cu deosebirea că se va selecta Actualizare Date.
+               DESCRIERE APLICATIE
+            <asp:GridView ID="GridView1" runat="server">
+            </asp:GridView>
         </p>
+
+    <div class="dropdown">
+                                <button class="dropbtn">Intorducere Date</button>
+                                <div class="dropdown-content">
+                                    <a href="/UpdateSalarii">Actualizare salarii</a>
+                                    <a href="/AdaugareAngajati">Adaugare Angajati</a>
+                                </div>
+                            </div>
 
 </asp:Content>

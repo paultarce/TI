@@ -1,9 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="InformatiiAplicatie.aspx.cs" Inherits="ProiectTiWeb.WebForm1" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-   
-    <asp:Panel ID="Panel1" runat="server" Height="150px">.
-        <h2><%: Title %>.</h2>
+   <br />
+    <asp:Panel ID="Panel1" runat="server" Height="150px">
     </asp:Panel>
+        <h2><%: Title %>.</h2>
+    
      <p>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                DESCRIERE APLICATIE

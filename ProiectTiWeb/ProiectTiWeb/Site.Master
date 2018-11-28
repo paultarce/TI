@@ -56,8 +56,9 @@
                     <center><asp:Label ID="Label1" runat="server" Text="Proiect TI Tarce Paul" Font-Size="Larger" ForeColor="White"></asp:Label>
                     <center>
                     <br />
-                    <br />
+                   
                     </center><asp:Image ID="Image1" runat="server" height="120" Width="120"/><center>
+                            <a runat="server" class="navbar-brand" href="~/">App Salarizare TPF</a>
                 </ContentTemplate> 
                  </asp:UpdatePanel>        
             </div>
@@ -69,9 +70,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">App Salarizare TPF</a>
-                    
-                </div>
+                    &nbsp;</div>
                 
                 <div>
                     <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" BackColor="#B5C7DE" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Small" ForeColor="#284E98" StaticSubMenuIndent="10px" Font-Bold="True" Font-Overline="True">
@@ -86,7 +85,7 @@
                             
 
                             <asp:MenuItem Text="Introducere Date" Value="Introducere Date">
-                                <asp:MenuItem Text="Actualizare date" Value="Actualizare date"></asp:MenuItem>
+                                <asp:MenuItem Text="Actualizare date" Value="Actualizare date" NavigateUrl="~/UpdateSalarii.aspx"></asp:MenuItem>
                                 <asp:MenuItem Text="Adaugare angajati" Value="Adaugare angajati"></asp:MenuItem>
                                 <asp:MenuItem Text="Stergere" Value="Stergere"></asp:MenuItem>
                             </asp:MenuItem>
@@ -94,7 +93,7 @@
                             <asp:MenuItem Text="Procente" Value="Procente"></asp:MenuItem>
                         </Items>
                         <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
-                        <StaticMenuItemStyle HorizontalPadding="30px" VerticalPadding="2px" />
+                        <StaticMenuItemStyle HorizontalPadding="40px" VerticalPadding="2px" />
                         <StaticSelectedStyle BackColor="#507CD1" />
                     </asp:Menu>
                 </div>

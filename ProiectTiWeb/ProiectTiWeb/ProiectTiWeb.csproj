@@ -214,6 +214,7 @@
     </Content>
     <Content Include="Images\MainPhoto.jpg" />
     <Content Include="InformatiiAplicatie.aspx" />
+    <Content Include="UpdateSalarii.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
@@ -428,6 +429,13 @@
     </Compile>
     <Compile Include="InformatiiAplicatie.aspx.designer.cs">
       <DependentUpon>InformatiiAplicatie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateSalarii.aspx.cs">
+      <DependentUpon>UpdateSalarii.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateSalarii.aspx.designer.cs">
+      <DependentUpon>UpdateSalarii.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

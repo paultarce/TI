@@ -86,7 +86,7 @@
 
                             <asp:MenuItem Text="Introducere Date" Value="Introducere Date">
                                 <asp:MenuItem Text="Actualizare date" Value="Actualizare date" NavigateUrl="~/UpdateSalarii.aspx"></asp:MenuItem>
-                                <asp:MenuItem Text="Adaugare angajati" Value="Adaugare angajati"></asp:MenuItem>
+                                <asp:MenuItem Text="Adaugare angajati" Value="Adaugare angajati" NavigateUrl="~/AdaugareAngajati.aspx"></asp:MenuItem>
                                 <asp:MenuItem Text="Stergere" Value="Stergere"></asp:MenuItem>
                             </asp:MenuItem>
                             <asp:MenuItem Text="Rapoarte" Value="Rapoarte"></asp:MenuItem>

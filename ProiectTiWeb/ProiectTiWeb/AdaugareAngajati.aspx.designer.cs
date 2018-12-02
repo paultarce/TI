@@ -40,13 +40,13 @@ namespace ProiectTiWeb {
         protected global::System.Web.UI.WebControls.TextBox txtNume;
         
         /// <summary>
-        /// rfv_nume control.
+        /// rfvNume control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_nume;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNume;
         
         /// <summary>
         /// txtPrenume control.
@@ -58,13 +58,13 @@ namespace ProiectTiWeb {
         protected global::System.Web.UI.WebControls.TextBox txtPrenume;
         
         /// <summary>
-        /// rfv_Prenume control.
+        /// rfvPrenume control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_Prenume;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPrenume;
         
         /// <summary>
         /// txtFunctie control.
@@ -76,13 +76,13 @@ namespace ProiectTiWeb {
         protected global::System.Web.UI.WebControls.TextBox txtFunctie;
         
         /// <summary>
-        /// rfv_functie control.
+        /// rfvFunctie control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_functie;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFunctie;
         
         /// <summary>
         /// txtSalarBaza control.
@@ -94,13 +94,13 @@ namespace ProiectTiWeb {
         protected global::System.Web.UI.WebControls.TextBox txtSalarBaza;
         
         /// <summary>
-        /// rfv_salar control.
+        /// rfvSalar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_salar;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSalar;
         
         /// <summary>
         /// txtSpor control.
@@ -112,58 +112,58 @@ namespace ProiectTiWeb {
         protected global::System.Web.UI.WebControls.TextBox txtSpor;
         
         /// <summary>
-        /// rev_spor control.
+        /// revSpor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator rev_spor;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revSpor;
         
         /// <summary>
-        /// rv_spor control.
+        /// rvSpor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator rv_spor;
+        protected global::System.Web.UI.WebControls.RangeValidator rvSpor;
         
         /// <summary>
-        /// rfv_spor control.
+        /// rfvSpor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_spor;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSpor;
         
         /// <summary>
-        /// txtPremii control.
+        /// txtPremiiBrute control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPremii;
+        protected global::System.Web.UI.WebControls.TextBox txtPremiiBrute;
         
         /// <summary>
-        /// rev_premii control.
+        /// revPremii control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator rev_premii;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revPremii;
         
         /// <summary>
-        /// rfv_premii control.
+        /// rfvPremii control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_premii;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPremii;
         
         /// <summary>
         /// txtRetineri control.
@@ -175,75 +175,48 @@ namespace ProiectTiWeb {
         protected global::System.Web.UI.WebControls.TextBox txtRetineri;
         
         /// <summary>
-        /// rev_retineri control.
+        /// revRetineri control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator rev_retineri;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revRetineri;
         
         /// <summary>
-        /// rfv_reineri control.
+        /// rfvReineri control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_reineri;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvReineri;
         
         /// <summary>
-        /// imgAngajat control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgAngajat;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// FileUploadControl control.
+        /// btnAdaugaAngajat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUploadControl;
+        protected global::System.Web.UI.WebControls.Button btnAdaugaAngajat;
         
         /// <summary>
-        /// IncarcaPoza control.
+        /// btnAnuleazaAdaugare control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button IncarcaPoza;
-        
-        /// <summary>
-        /// lblImagine control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblImagine;
-        
-        /// <summary>
-        /// AdaugaAngajat control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AdaugaAngajat;
-        
-        /// <summary>
-        /// AnuleazaAdaugare control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AnuleazaAdaugare;
+        protected global::System.Web.UI.WebControls.Button btnAnuleazaAdaugare;
     }
 }

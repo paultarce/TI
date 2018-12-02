@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AdaugareAngajati.aspx.cs" Inherits="ProiectTiWeb.AdaugareAngajati" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AdaugareAngajati.aspx.cs" Inherits="ProiectTiWeb.AdaugareAngajati" UnobtrusiveValidationMode="None"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <br />
@@ -14,53 +14,75 @@
      <Table ID="Table1" runat="server">
         <tr>
             <th>Nume</th>
-            <th> <asp:TextBox ID="txtNume" runat="server" style="margin-bottom: 0px"></asp:TextBox> </th>  
-            <th> <asp:RequiredFieldValidator ID="rfv_nume" runat="server" ControlToValidate="txtNume" ErrorMessage="Nu ati introdus numele" ForeColor="Red"></asp:RequiredFieldValidator></th>        
+            <th style="width: 130px"> <asp:TextBox ID="txtNume" runat="server" ></asp:TextBox> </th>  
+            <th> <asp:RequiredFieldValidator ID="rfvNume" runat="server" ControlToValidate="txtNume" ErrorMessage="Introduceti nume" ForeColor="Green"></asp:RequiredFieldValidator></th>        
           </tr>
+         <tr>
+             <th></th>
+         </tr>
           <tr>
             <th>Prenume</th>
-            <th> <asp:TextBox ID="txtPrenume" runat="server" style="margin-bottom: 0px"></asp:TextBox> </th>   
-            <th> <asp:RequiredFieldValidator ID="rfv_Prenume" runat="server" ControlToValidate="txtPrenume" ErrorMessage="Nu ati introdus prenumele" ForeColor="Red"></asp:RequiredFieldValidator></th>                    
-          </tr>  
+            <th style="width: 130px"> <asp:TextBox ID="txtPrenume" runat="server" style="margin-bottom: 0px"></asp:TextBox> </th>   
+            <th> <asp:RequiredFieldValidator ID="rfvPrenume" runat="server" ControlToValidate="txtPrenume" ErrorMessage="Introduceti prenumele" ForeColor="Green"></asp:RequiredFieldValidator></th>                    
+          </tr> 
+         <tr>
+             <th></th>
+         </tr> 
          <tr>
             <th>Functie</th>
-            <th> <asp:TextBox ID="txtFunctie" runat="server" style="margin-bottom: 0px"></asp:TextBox> </th> 
-            <th> <asp:RequiredFieldValidator ID="rfv_functie" runat="server" ControlToValidate="txtFunctie" ErrorMessage="Nu ati introdus functia" ForeColor="Red"></asp:RequiredFieldValidator></th>                            
-          </tr>    
+            <th style="width: 130px"> <asp:TextBox ID="txtFunctie" runat="server" style="margin-bottom: 0px"></asp:TextBox> </th> 
+            <th> <asp:RequiredFieldValidator ID="rfvFunctie" runat="server" ControlToValidate="txtFunctie" ErrorMessage="Introduceti functia" ForeColor="Green"></asp:RequiredFieldValidator></th>                            
+          </tr> 
+         <tr>
+             <th></th>
+         </tr>   
           <tr>
-            <th>Salar Baza</th>
-            <th> <asp:TextBox ID="txtSalarBaza" runat="server" style="margin-bottom: 0px"></asp:TextBox> </th>          
-           <th> <asp:RequiredFieldValidator ID="rfv_salar" runat="server" ControlToValidate="txtSalarBaza" ErrorMessage="Nu ati introdus salariul" ForeColor="Red"></asp:RequiredFieldValidator></th>        
+            <th style="height: 25px">Salar Baza</th>
+            <th style="height: 25px; width: 130px;"> <asp:TextBox ID="txtSalarBaza" runat="server" style="margin-bottom: 0px"></asp:TextBox> </th>          
+           <th style="height: 25px"> <asp:RequiredFieldValidator ID="rfvSalar" runat="server" ControlToValidate="txtSalarBaza" ErrorMessage="Introduceti salariul de baza" ForeColor="Green"></asp:RequiredFieldValidator></th>        
             
           </tr>
+         <tr>
+             <th></th>
+         </tr>
           <tr>
-            <th>Spor ( in % )</th>
-            <th> <asp:TextBox ID="txtSpor" runat="server" style="margin-bottom: 0px">0</asp:TextBox> </th>          
-            <th> <asp:RegularExpressionValidator ID="rev_spor" runat="server" ControlToValidate="txtSpor" ValidationExpression="^\d+$" ErrorMessage="Sporul nu este un numar" ForeColor="Red"></asp:RegularExpressionValidator>
+            <th>Spor</th>
+            <th style="width: 130px"> <asp:TextBox ID="txtSpor" runat="server" style="margin-bottom: 0px">0</asp:TextBox> </th>          
+            <th> <asp:RegularExpressionValidator ID="revSpor" runat="server" ControlToValidate="txtSpor" ValidationExpression="^\d+$" ErrorMessage="Sporul trebuie sa fie numar" ForeColor="Green"></asp:RegularExpressionValidator>
             </th>
-            <th> <asp:RangeValidator ID="rv_spor" runat="server" ControlToValidate="txtSpor" ErrorMessage="Sporul nu este intre 0 si 100" ForeColor="Red" Type="Integer" MaximumValue="100" MinimumValue="0"></asp:RangeValidator>
+            <th style="width: 198px"> <asp:RangeValidator ID="rvSpor" runat="server"  ControlToValidate="txtSpor" ErrorMessage="Valori spor : [0, 100]" ForeColor="Green" Type="Integer" MaximumValue="100" MinimumValue="0"></asp:RangeValidator>
             </th>        
             <th> 
-            <asp:RequiredFieldValidator ID="rfv_spor" runat="server" ControlToValidate="txtSpor" ErrorMessage="Nu ati introdus sporul" ForeColor="Red"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="rfvSpor" runat="server" ControlToValidate="txtSpor" ErrorMessage="Introduceti sporul" ForeColor="Green"></asp:RequiredFieldValidator>
             </th>                      
           </tr>
+         <tr>
+             <th></th>
+         </tr>
           <tr>
             <th>Premii</th>
-            <th> <asp:TextBox ID="txtPremii" runat="server" style="margin-bottom: 0px">0</asp:TextBox> </th>          
-            <th> <asp:RegularExpressionValidator ID="rev_premii" runat="server" ControlToValidate="txtPremii" ValidationExpression="^\d+$" ForeColor="Red" ErrorMessage="Premiul nu este un numar"></asp:RegularExpressionValidator>
+            <th style="width: 130px"> <asp:TextBox ID="txtPremiiBrute" runat="server" style="margin-bottom: 0px">0</asp:TextBox> </th>          
+            <th> <asp:RegularExpressionValidator ID="revPremii" runat="server" ControlToValidate="txtPremii" ValidationExpression="^\d+$" ForeColor="Green" ErrorMessage="Premiul 
+                trebuie sa fie numar"></asp:RegularExpressionValidator>
             </th>
-               <th> <asp:RequiredFieldValidator ID="rfv_premii" runat="server" ControlToValidate="txtPremii" ErrorMessage="Nu ati introdus premiile" ForeColor="Red"></asp:RequiredFieldValidator></th>        
+               <th style="width: 198px"> <asp:RequiredFieldValidator ID="rfvPremii" runat="server" ControlToValidate="txtPremii" ErrorMessage="Introduceti premiile" ForeColor="Green"></asp:RequiredFieldValidator></th>        
          
           </tr>
+         <tr>
+             <th></th>
+         </tr>
           <tr>
             <th>Retineri</th>
-            <th> <asp:TextBox ID="txtRetineri" runat="server" style="margin-bottom: 0px">0</asp:TextBox> </th>          
-            <th> <asp:RegularExpressionValidator ID="rev_retineri" runat="server" ControlToValidate="txtRetineri" ValidationExpression="^\d+$" ForeColor="Red" ErrorMessage="Retinerea nu este un numar"></asp:RegularExpressionValidator>
+            <th style="width: 130px"> <asp:TextBox ID="txtRetineri" runat="server" style="margin-bottom: 0px">0</asp:TextBox> </th>          
+            <th> <asp:RegularExpressionValidator ID="revRetineri" runat="server" ControlToValidate="txtRetineri" ValidationExpression="^\d+$" ForeColor="Green" ErrorMessage="Retinerea trebuie sa fie numar"></asp:RegularExpressionValidator>
             </th>
-              <th> <asp:RequiredFieldValidator ID="rfv_reineri" runat="server" ControlToValidate="txtRetineri" ErrorMessage="Nu ati introdus retinerile" ForeColor="Red"></asp:RequiredFieldValidator></th>        
+              <th style="width: 198px"  > <asp:RequiredFieldValidator ID="rfvReineri"  runat="server" ControlToValidate="txtRetineri" ErrorMessage="Introduceti retinerile" ForeColor="Green"></asp:RequiredFieldValidator></th>        
          
           </tr>
-          <tr>
+         <tr>
+             <th></th>
+         </tr>
+        <%--  <tr>
             <th>Poza Angajat</th>
             <th> <asp:Image ID="imgAngajat" runat="server" /> </th>          
             <th> 
@@ -70,17 +92,25 @@
                 <br /><br/>
                 <asp:Label runat="server" id="lblImagine"/>
             </th>
-          </tr>
+          </tr>--%>
              <tr>
             <th></th>   
-                 <th></th>   
+                 <th style="width: 130px">
+                     <br />
+                     <br />
+                 </th>   
             <th>
-                <asp:Button ID="AdaugaAngajat" runat="server" Text="Adauga" 
-                    OnClick="AdaugaAngajat_Click" BackColor="#CC0000" BorderColor="#CC0000" Font-Bold="True" ForeColor="White" /> 
-                <asp:Button ID="AnuleazaAdaugare" runat="server" Text="Anuleaza" 
-                    OnClick="AnuleazaAdaugare_Click" BackColor="#CC0000" BorderColor="#CC0000" Font-Bold="True" ForeColor="White" /> </th>
+                <asp:Label ID="Label2" runat="server" Text="Label" ForeColor="Red"></asp:Label>
+                 </th>
+                
           </tr>
      </Table>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:Button ID="btnAdaugaAngajat" runat="server" Text="Adauga" 
+                     BackColor="Green" Font-Bold="True" ForeColor="Black" Height="36px" Width="140px" OnClick="btnAdaugaAngajat_Click" /> 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <asp:Button ID="btnAnuleazaAdaugare" runat="server" Text="Anuleaza" 
+        BackColor="Green" Font-Bold="True" ForeColor="Black" Height="36px" Width="140px" /> 
 
 
 

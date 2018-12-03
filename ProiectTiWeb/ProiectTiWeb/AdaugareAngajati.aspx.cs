@@ -24,7 +24,7 @@ namespace ProiectTiWeb
         {
             if (!Page.IsPostBack)
             {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "scriptkey", "alert('your message');");
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "scriptkey", "Adaugare angajati");
             }
         }
 
@@ -59,22 +59,22 @@ namespace ProiectTiWeb
 
                 if (salar_baza > 100000)
                 {
-                    Label2.Text += "Salar Baza < 100000";
+                    Label2.Text += " Salar Baza < 100000";
                     k = 1;
                 }
                 if (spor > 100)
                 {
-                    Label2.Text += "Spor < 100";
+                    Label2.Text += " Spor < 100";
                     k = 1;
                 }
                 if (premii > salar_baza / 2)
                 {
-                    Label2.Text += "Premii < Salar_Baza/2";
+                    Label2.Text += " Premii < Salar_Baza/2";
                     k = 1;
                 }
                 if (retineri > salar_baza / 2)
                 {
-                    Label2.Text += "Retineri < Salar_Bza/2";
+                    Label2.Text += " Retineri < Salar_Bza/2";
                     k = 1;
                 }
             }
@@ -87,7 +87,7 @@ namespace ProiectTiWeb
             {
                 try
                 {
-                    conn = new OracleConnection("DATA SOURCE=localhost:1521/XE;PASSWORD=STUDENT;PERSIST SECURITY INFO=True;USER ID=STUDENT");
+                    conn = new OracleConnection(connString);
                     conn.Open();
 
                     string sqlString = "INSERT INTO salarii (nume,prenume,functie,salar_baza,spor,premii_brute,retineri) values ('"
@@ -97,9 +97,9 @@ namespace ProiectTiWeb
                     int i = cmd.ExecuteNonQuery();
                     //Form1_Load(sender, e);
                     //MessageBox.Show("Succes Adaugare", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    Reactualizare();
                     //adaugareAngajatiToolStripMenuItem_Click(sender, e);
-                    Page.ClientScript.RegisterStartupScript(this.GetType(), "scriptkey", "alert('Adaugare cu succes');");
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "scriptkey", "Adaugare cu succes");
                 }
                 catch (OracleException ex)
                 {
@@ -107,11 +107,23 @@ namespace ProiectTiWeb
                 }
                 finally
                 {
-                    if (cn.State == ConnectionState.Open)
-                        cn.Close();
+                    if (conn.State == ConnectionState.Open)
+                        conn.Close();
                 }
             }
         }
+
+        protected void btnAnuleazaAdaugare_Click(object sender, EventArgs e)
+        {
+            Reactualizare();
+        }
+
+        public void Reactualizare()
+        {
+            txtNume.Text = ""; txtPrenume.Text = ""; txtFunctie.Text = ""; txtSalarBaza.Text = ""; // NUME PRENUME FUNCTII defaul -> empty
+            txtSpor.Text = "0"; txtPremiiBrute.Text = "0"; txtRetineri.Text = "0";
+        }
+
     }
 }
 

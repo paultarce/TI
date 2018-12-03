@@ -49,6 +49,15 @@ namespace ProiectTiWeb {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNume;
         
         /// <summary>
+        /// revNume control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revNume;
+        
+        /// <summary>
         /// txtPrenume control.
         /// </summary>
         /// <remarks>
@@ -65,6 +74,15 @@ namespace ProiectTiWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPrenume;
+        
+        /// <summary>
+        /// RegularExpressionValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
         
         /// <summary>
         /// txtFunctie control.
@@ -101,6 +119,24 @@ namespace ProiectTiWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSalar;
+        
+        /// <summary>
+        /// revSalarBaza control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revSalarBaza;
+        
+        /// <summary>
+        /// rvSalarBaza control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rvSalarBaza;
         
         /// <summary>
         /// txtSpor control.

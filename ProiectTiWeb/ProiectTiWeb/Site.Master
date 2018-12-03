@@ -59,7 +59,7 @@
                     <br />
                    
                     </center><asp:Image ID="Image1" runat="server" height="120" Width="120" /><center>
-                            <a runat="server" class="navbar-brand" href="~/">ACASA</a>
+                            <a runat="server" class="navbar-brand" href="~/InformatiiAplicatie">ACASA</a>
                 </ContentTemplate> 
                  </asp:UpdatePanel>        
             </div>

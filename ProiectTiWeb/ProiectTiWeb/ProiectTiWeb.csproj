@@ -216,6 +216,7 @@
     <Content Include="InformatiiAplicatie.aspx" />
     <Content Include="UpdateSalarii.aspx" />
     <Content Include="AdaugareAngajati.aspx" />
+    <Content Include="StergereAngajat.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
@@ -444,6 +445,13 @@
     </Compile>
     <Compile Include="AdaugareAngajati.aspx.designer.cs">
       <DependentUpon>AdaugareAngajati.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StergereAngajat.aspx.cs">
+      <DependentUpon>StergereAngajat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StergereAngajat.aspx.designer.cs">
+      <DependentUpon>StergereAngajat.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -217,6 +217,8 @@
     <Content Include="UpdateSalarii.aspx" />
     <Content Include="AdaugareAngajati.aspx" />
     <Content Include="StergereAngajat.aspx" />
+    <Content Include="ModificareImpozit.aspx" />
+    <Content Include="ModificareParola.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
@@ -452,6 +454,20 @@
     </Compile>
     <Compile Include="StergereAngajat.aspx.designer.cs">
       <DependentUpon>StergereAngajat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificareImpozit.aspx.cs">
+      <DependentUpon>ModificareImpozit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificareImpozit.aspx.designer.cs">
+      <DependentUpon>ModificareImpozit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificareParola.aspx.cs">
+      <DependentUpon>ModificareParola.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificareParola.aspx.designer.cs">
+      <DependentUpon>ModificareParola.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

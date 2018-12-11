@@ -19,6 +19,7 @@ namespace ProiectTiWeb
         OracleCommand cmd;
         string str;
         string connString = "DATA SOURCE=localhost:1521/XE;PASSWORD=STUDENT;PERSIST SECURITY INFO=True;USER ID=STUDENT";
+        static int check = 0;
 
         protected void btnModificareProcente_Click(object sender, EventArgs e)
         {
@@ -67,33 +68,37 @@ namespace ProiectTiWeb
             }
         }
 
+      
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
+
+            if (!Page.IsPostBack)
             {
-                conn = new OracleConnection(connString);
-                conn.Open();
-                OracleCommand comm = new OracleCommand("SELECT * FROM procente", conn);
-                OracleDataReader reader = comm.ExecuteReader();
-                if (reader.HasRows)
+                try
                 {
-                    if (reader.Read())
+                    conn = new OracleConnection(connString);
+                    conn.Open();
+                    OracleCommand comm = new OracleCommand("SELECT * FROM procente", conn);
+                    OracleDataReader reader = comm.ExecuteReader();
+                    if (reader.HasRows)
                     {
-                        txtCAS.Text = reader["CAS"].ToString();
-                        txtCASS.Text = reader["CASS"].ToString();
-                        txtImpozit.Text = reader["impozit"].ToString();
+                        if (reader.Read())
+                        {
+                            txtCAS.Text = reader["CAS"].ToString();
+                            txtCASS.Text = reader["CASS"].ToString();
+                            txtImpozit.Text = reader["impozit"].ToString();
+                        }
                     }
+
+                    conn.Close();
+                }
+                catch
+                {
+                    HttpContext.Current.Response.Write("<SCRIPT LANGUAGE='JavaScript'>alert('Eroare la modificare impozit')</SCRIPT>");
                 }
 
-                conn.Close();
             }
-            catch
-            {
-                HttpContext.Current.Response.Write("<SCRIPT LANGUAGE='JavaScript'>alert('Eroare la modificare impozit')</SCRIPT>");
             }
-        }
-
-       
-        
     }
 }

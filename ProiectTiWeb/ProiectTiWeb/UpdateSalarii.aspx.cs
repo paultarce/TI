@@ -36,6 +36,12 @@ namespace ProiectTiWeb
                     GridView1.DataSource = ds.Tables["salarii"].DefaultView;
                     GridView1.DataBind();
                     conn.Close();
+                    txtNumeCautat.Text = "Nume cautat";
+                    txtNume.Text = "Nume";
+                    txtPrenume.Text = "Prenume";
+                    txtFunctie.Text = "Functie";
+                    txtSpor.Text = "0";
+                    txtSalarBaza.Text = "4000";
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "scriptkey", "Actualizare salariati");
                 }
                 catch
@@ -104,15 +110,14 @@ namespace ProiectTiWeb
                      GridView1.Rows[GridView1.SelectedIndex].Cells[1].Text;
                 OracleCommand comm = new OracleCommand(command, conn);
                 comm.ExecuteNonQuery();
+                HttpContext.Current.Response.Write("<SCRIPT LANGUAGE='JavaScript'>alert('Modificare realizata')</SCRIPT>");
 
             }
             catch(Exception ex)
             {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "scriptkey", "Comanda modificare esuata");
+                HttpContext.Current.Response.Write("<SCRIPT LANGUAGE='JavaScript'>alert('Eroare modoficare')</SCRIPT>");
             }
             RefreshGrid();
-
-
 
         }
 
@@ -155,7 +160,7 @@ namespace ProiectTiWeb
         {
             char[] sep = { ' ', ',' };
             string[] split = txtNumeCautat.Text.Split(sep);
-            if (split.Length > 1)
+            if (split.Length == 2)
             {
                 conn = new OracleConnection(connString);
                 conn.Open();
@@ -182,12 +187,16 @@ namespace ProiectTiWeb
                 ds = new DataSet();
                 da.Fill(ds, "salarii");
 
-                ds.Tables["salarii"].DefaultView.RowFilter = "nume LIKE '*" + split[0] + "*'|";
+                ds.Tables["salarii"].DefaultView.RowFilter = "nume LIKE '*" + split[0] + "*' OR prenume LIKE '*" + split[0] + "*'";
 
                 // ** Afişează datele                  
                 GridView1.DataSource = ds.Tables["salarii"].DefaultView;
                 GridView1.DataBind();
                 conn.Close();
+            }
+            else
+            {
+                HttpContext.Current.Response.Write("<SCRIPT LANGUAGE='JavaScript'>alert('Introduceti nume si/sau prenume')</SCRIPT>");
             }
 
         }

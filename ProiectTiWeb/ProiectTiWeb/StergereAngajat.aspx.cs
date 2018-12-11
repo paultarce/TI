@@ -34,6 +34,7 @@ namespace ProiectTiWeb
                     GridView1.DataSource = ds.Tables["salarii"].DefaultView;
                     GridView1.DataBind();
                     conn.Close();
+                    txtNumeCautat.Text = "Nume cautat";
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "scriptkey", "Actualizare salariati");
                 }
                 catch
@@ -138,19 +139,26 @@ namespace ProiectTiWeb
 
         protected void btnStergereAngajat_Click1(object sender, EventArgs e)
         {
-            conn = new OracleConnection(connString);
-            conn.Open();
-            OracleParameter p = new OracleParameter();
-            p.Value = GridView1.Rows[GridView1.SelectedIndex].Cells[1].Text;
+            try
+            {
+                conn = new OracleConnection(connString);
+                conn.Open();
+                OracleParameter p = new OracleParameter();
+                p.Value = GridView1.Rows[GridView1.SelectedIndex].Cells[1].Text;
 
-            string command = "DELETE from salarii where nr_crt = :1";
-            OracleCommand cmd = new OracleCommand(command, conn);
+                string command = "DELETE from salarii where nr_crt = :1";
+                OracleCommand cmd = new OracleCommand(command, conn);
 
-            cmd.Parameters.Add(p);
-            cmd.ExecuteNonQuery();
-            conn.Close();
-
-            RefreshGrid();
+                cmd.Parameters.Add(p);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                HttpContext.Current.Response.Write("<SCRIPT LANGUAGE='JavaScript'>alert('Angajat sters')</SCRIPT>");
+                RefreshGrid();
+            }
+            catch(Exception ex)
+            {
+                HttpContext.Current.Response.Write("<SCRIPT LANGUAGE='JavaScript'>alert('Eroare stergere.Verificati daca ati selectat angajatul')</SCRIPT>");
+            }
         }
     }
 }

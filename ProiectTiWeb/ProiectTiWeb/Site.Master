@@ -90,7 +90,10 @@
                                 <asp:MenuItem Text="Adaugare angajati" Value="Adaugare angajati" NavigateUrl="~/AdaugareAngajati.aspx"></asp:MenuItem>
                                 <asp:MenuItem Text="Stergere" Value="Stergere" NavigateUrl="~/StergereAngajat.aspx"></asp:MenuItem>
                             </asp:MenuItem>
-                            <asp:MenuItem Text="Rapoarte" Value="Rapoarte"></asp:MenuItem>
+                            <asp:MenuItem Text="Rapoarte" Value="Rapoarte">
+                                <asp:MenuItem Text="Stat Plata" Value="Stat Plata"></asp:MenuItem>
+                                <asp:MenuItem Text="Fluturasi" Value="Fluturasi"></asp:MenuItem>
+                            </asp:MenuItem>
                             <asp:MenuItem Text="Procente" Value="Procente">
                                 <asp:MenuItem Text="Modificare Impozit" Value="Modificare Impozit" NavigateUrl="~/ModificareImpozit.aspx"></asp:MenuItem>
                                 <asp:MenuItem Text="Modificare Parola" Value="Modificare Parola" NavigateUrl="~/ModificareParola.aspx"></asp:MenuItem>

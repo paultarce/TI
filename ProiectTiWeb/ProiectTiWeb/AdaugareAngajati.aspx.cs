@@ -100,10 +100,12 @@ namespace ProiectTiWeb
                     Reactualizare();
                     //adaugareAngajatiToolStripMenuItem_Click(sender, e);
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "scriptkey", "Adaugare cu succes");
+                    HttpContext.Current.Response.Write("<SCRIPT LANGUAGE='JavaScript'>alert('Adaugare cu succes')</SCRIPT>");
                 }
                 catch (OracleException ex)
                 {
                     //MessageBox.Show("Eroare Adaugare:" + ex.Message, "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    HttpContext.Current.Response.Write("<SCRIPT LANGUAGE='JavaScript'>alert('Eroare la adaugare')</SCRIPT>");
                 }
                 finally
                 {

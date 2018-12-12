@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProiectTiWeb {
+namespace TPBDApp.CrystalReports {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace ProiectTiWeb {
         
         public override string FullResourceName {
             get {
-                return "ProiectTiWeb.CrystalReport1.rpt";
+                return "TPBDApp.CrystalReports.CrystalReport1.rpt";
             }
             set {
                 // Do nothing

@@ -91,7 +91,7 @@
                                 <asp:MenuItem Text="Stergere" Value="Stergere" NavigateUrl="~/StergereAngajat.aspx"></asp:MenuItem>
                             </asp:MenuItem>
                             <asp:MenuItem Text="Rapoarte" Value="Rapoarte">
-                                <asp:MenuItem Text="Stat Plata" Value="Stat Plata"></asp:MenuItem>
+                                <asp:MenuItem Text="Stat Plata" Value="Stat Plata" NavigateUrl="~/StatPlata.aspx"></asp:MenuItem>
                                 <asp:MenuItem Text="Fluturasi" Value="Fluturasi"></asp:MenuItem>
                             </asp:MenuItem>
                             <asp:MenuItem Text="Procente" Value="Procente">

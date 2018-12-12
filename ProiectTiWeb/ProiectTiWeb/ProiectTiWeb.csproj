@@ -224,6 +224,7 @@
     <Content Include="ModificareImpozit.aspx" />
     <Content Include="ModificareParola.aspx" />
     <Content Include="StatPlata.aspx" />
+    <Content Include="Fluturasi.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
@@ -409,18 +410,18 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CrystalReport1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fluturasi2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fluturasi2.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -442,6 +443,12 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="StatDePlata.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StatDePlata.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="StatPlataDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -503,14 +510,25 @@
     <Compile Include="StatPlata.aspx.designer.cs">
       <DependentUpon>StatPlata.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Fluturasi.aspx.cs">
+      <DependentUpon>Fluturasi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fluturasi.aspx.designer.cs">
+      <DependentUpon>Fluturasi.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CrystalReport1.rpt">
+    <EmbeddedResource Include="Fluturasi2.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+      <LastGenOutput>Fluturasi2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatDePlata.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StatDePlata.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

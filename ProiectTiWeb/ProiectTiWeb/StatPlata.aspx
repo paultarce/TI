@@ -9,7 +9,18 @@
 <p></p>
 
 
-<CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" OnInit="CrystalReportViewer1_Init" />
+    <asp:Button ID="btnAfisare" runat="server" Text="Afisare Stat Plata" OnClick="btnAfisare_Click" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:Button ID="btnSalvarePdf" runat="server" Text="Salvare in PDF" OnClick="btnSalvarePdf_Click" />
 
+
+    <br />
+
+
+<CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" EnableDatabaseLogonPrompt="False" EnableParameterPrompt="False" ReuseParameterValuesOnRefresh="True" ToolPanelView="None" />
+
+
+    <br />
+    
 
 </asp:Content>

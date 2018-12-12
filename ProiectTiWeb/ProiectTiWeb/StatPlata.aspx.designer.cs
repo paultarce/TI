@@ -22,6 +22,24 @@ namespace ProiectTiWeb {
         protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
+        /// btnAfisare control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAfisare;
+        
+        /// <summary>
+        /// btnSalvarePdf control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSalvarePdf;
+        
+        /// <summary>
         /// CrystalReportViewer1 control.
         /// </summary>
         /// <remarks>
